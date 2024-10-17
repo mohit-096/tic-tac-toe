@@ -26,6 +26,7 @@ void insertXO(int pos,int n){
 	int j=pos%3;
 	if(board[i][j]!='_'){
 		printf("BOX IS ALREADY OCCUPIED,TRY AGAIN\n");
+		void play();
 		play(n);
 		return;
 	} else{
@@ -117,6 +118,7 @@ void ending(){
 	printf("\n\nEnter 1 to restart\nEnter 0 to exit\n");
 	scanf("%d",&a);
 	if(a==1){
+	    int main();
 		main();
 	}
 	else if(a==0){
@@ -127,9 +129,11 @@ void ending(){
 		ending();
 	}
 }
-void main(){
-	printf("###Welcome to TicTacToe###\n>Player 1 --> X\n>Player 2 --> O\n");
-	printf("Instructions:\nInsert the given numbers to the corresponding position as shown--->\n");
+int main(){
+	printf("\t#**#WELCOME to TIC TAC TOE Game#**#\n\n");
+	printf("\n**Please read INSTRUCTIONS**\n\n");
+	printf("Player-1 --> X\nPlayer-2 --> O\n");
+	printf("Insert the given numbers to the corresponding position as shown--->\n");
 	int p=1;
 	printf("___________________\n");
 	for(int i=0; i<3; i++){
@@ -143,5 +147,5 @@ void main(){
 	initialise();
 	play(1);
 	ending();
-	return;
+	return 0;
 }
